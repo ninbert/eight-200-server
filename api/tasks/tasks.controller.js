@@ -7,7 +7,13 @@ const getAllTasks = async (req, res) => {
 	res.send(result);
 };
 
+const createNewTask = async (req,res) => {
+    const result = await taskService.createNewTask(req.body)
+    res.send(result)
+}
+
 
 module.exports = {
-	getAllTasks
+	getAllTasks,
+	createNewTask,
 };
